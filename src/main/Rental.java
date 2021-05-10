@@ -48,4 +48,9 @@ class Rental
     {
     	return (movie.getPriceCode() == PriceCode.NEW_RELEASE && daysRented >= 2) ? 2 : 1;
     }
+    
+    public String toString()
+    {
+    	return movie.getTitle()+ "\t" + "\t" + daysRented + "\t" + String.valueOf(calculateAmount());
+    }
 }
