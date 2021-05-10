@@ -9,10 +9,10 @@ public class Movie
     private String title;
     private int priceCode;
     
-    public Movie(String newtitle, int newpriceCode) 
+    public Movie(String title, int priceCode) 
     {
-        title = newtitle;
-        priceCode = newpriceCode;
+        this.title = title;
+        this.priceCode = priceCode;
     }
     
     public int getPriceCode() 
@@ -20,9 +20,9 @@ public class Movie
         return priceCode;
     }
     
-    public void setPriceCode(int arg) 
+    public void setPriceCode(int priceCode) 
     {
-        priceCode = arg;
+        this.priceCode = priceCode;
     }
     
     public String getTitle ()
