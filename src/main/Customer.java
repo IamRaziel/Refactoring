@@ -13,9 +13,9 @@ class Customer
         this.name = name;
     }
     
-    public void addRental(Rental rental) 
+    public void rentAMovie(Movie movie, int daysRented) 
     {
-        rentals.add(rental);
+        rentals.add(new Rental(movie, daysRented));
     }
     
     public String getName ()

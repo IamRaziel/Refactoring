@@ -20,10 +20,9 @@ public class Program
         System.out.println("Welcome to the Movie Store");
         Movie m1 = new Movie("movie1", PriceCode.NEW_RELEASE);
         Movie m2 = new Movie("movie2", PriceCode.CHILDRENS);
-        Rental r1 = new Rental(m1, 10);
-        Rental r2 = new Rental(m2, 5);
-        Customer c1 = new Customer("joe");
-        c1.addRental(r1);   c1.addRental(r2);   
+        Customer c1 = new Customer("joe");  
+        c1.rentAMovie(m1, 10);
+        c1.rentAMovie(m2, 5);
         System.out.println("Let's get the Statement");
         result = c1.statement();
         System.out.println(result);
