@@ -1,20 +1,30 @@
+package java;
 
 import java.lang.*;
 import java.util.*;
 
-class Customer {
+class Customer 
+{
     private String name;
     private Vector rentals = new Vector();
-    public Customer (String newname){
+    
+    public Customer (String newname)
+    {
         name = newname;
-    };
-    public void addRental(Rental arg) {
+    }
+    
+    public void addRental(Rental arg) 
+    {
         rentals.addElement(arg);
-    };
-    public String getName (){
+    }
+    
+    public String getName ()
+    {
         return name;
-    };
-    public String statement() {
+    }
+    
+    public String statement()
+    {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration enum_rentals = rentals.elements();	    
@@ -41,7 +51,8 @@ class Customer {
         return result;
     }
 
-    private double amountFor(Rental each) {
+    private double amountFor(Rental each)
+    {
         double thisAmount = 0;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
@@ -60,6 +71,5 @@ class Customer {
         }
         return thisAmount;
     }
-
 }
     
