@@ -16,16 +16,19 @@ public class Program
     
     public static void main(String args[]) 
     {
-        String result;
-        System.out.println("Welcome to the Movie Store");
+    	System.out.println("Welcome to the Movie Store");
         Movie m1 = new Movie("movie1", PriceCode.NEW_RELEASE);
         Movie m2 = new Movie("movie2", PriceCode.CHILDRENS);
         Customer c1 = new Customer("joe");  
         c1.rentAMovie(m1, 10);
         c1.rentAMovie(m2, 5);
         System.out.println("Let's get the Statement");
-        result = c1.statement();
-        System.out.println(result);
+        System.out.println(getStatement(c1));
+    }
+    
+    public static String getStatement(Customer customer)
+    {
+        return customer.statement();
     }
 }
 
