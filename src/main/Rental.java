@@ -38,7 +38,7 @@ class Rental
             case CHILDRENS:
                 thisAmount = 1.5;
                 if (daysRented > 3)
-                    thisAmount *= (daysRented - 3);
+                    thisAmount *= (daysRented - 2);
                 break;
         }
         return thisAmount;
