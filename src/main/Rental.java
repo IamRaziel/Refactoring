@@ -43,4 +43,9 @@ class Rental
         }
         return thisAmount;
     }
+    
+    public int calculateRenterPoints()
+    {
+    	return (movie.getPriceCode() == PriceCode.NEW_RELEASE && daysRented >= 2) ? 2 : 1;
+    }
 }
